@@ -1,0 +1,18 @@
+  <div class="container" style="width:95%" >
+    <h3>Hello! Welcome to Raspberry Pi! </h3> Filter :
+    <input type="text" ng-model="name"> {{name}} </br>
+    <h4>This is a view page</h4>
+    </br>
+
+    <button type="button" class="btn btn-warning" ng-click="getLedStatus()"> Get LED Status </button> &nbsp; {{ 'LED is : ' +  ledstatus.led}} </br> </br>
+
+    <table class="table table-striped" style="width:100%">
+      <tr ng-repeat="person in data | filter:name">
+        <td>{{person.name}}</td>
+        <td>{{person.city}}</td>
+        <td>100</td>
+      </tr>
+    </table>
+
+    <a href="#/addnew"> Add New Person </a>
+  </div>
