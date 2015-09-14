@@ -10,9 +10,7 @@ state = 0
 @app.route('/index')
 def index():
     user = {'nickname': 'Raspberry Pi User !'}  # fake user
-    return render_template('index.html',
-                           title='Home',
-                           user=user)
+    return render_template('index.html')
 
 
 @app.route('/toggle')
